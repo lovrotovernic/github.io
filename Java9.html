@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript event</TITLE>
+<script language="JavaScript">
+function zbrajanje()
+{
+var broj1=parseFloat(window.document.form.field1.value);
+var broj2=parseFloat(window.document.form.field2.value);
+var zbroj=broj1+broj2;
+window.document.form.rezultat.value=zbroj;
+}
+function množenje()
+{
+var broj1=parseFloat(window.document.form.field1.value);
+var broj2=parseFloat(window.document.form.field2.value);
+var umnožak=broj1*broj2;
+window.document.form.rezultat.value=umnožak;
+}
+function dijeljenje()
+{
+var broj1=parseFloat(window.document.form.field1.value);
+var broj2=parseFloat(window.document.form.field2.value);
+var division=broj1/broj2;
+window.document.form.rezultat.value=division;
+}
+</script>
+</head>
+<body>
+<form name="form">
+Broj 1:<input type="text" name="field1"><br>
+Broj 2:<input type="text" name="field2"><br>
+Rezultat:<input type="text" name="rezultat"><br>
+<a href="#" onClick="zbrajanje();">Zbroji ta dva broja!</a>
+<a href="#" onClick="množenje();">Pomnoži ta dva broja!</a>
+<a href="#" onClick="dijeljenje();">Podijeli ta dva broja!</a>
+</form>
+</HTML>

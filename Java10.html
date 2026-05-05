@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript event</TITLE>
+<script language="JavaScript">
+function rezultat()
+{
+var točnih=0;
+if (window.document.form.pitanje1.checked==true)
+{točnih=točnih+1;}
+else
+{window.document.form.pitanje1.checked=true}
+if (window.document.form.pitanje2.checked==false)
+{točnih=točnih+1;}
+else
+{window.document.form.pitanje2.checked=false}
+if (window.document.form.pitanje3.checked==false)
+{točnih=točnih+1;}
+else
+{window.document.form.pitanje3.checked=false}
+if (window.document.form.pitanje4.checked==true)
+{točnih=točnih+1;}
+else
+{window.document.form.pitanje4.checked=true}
+alert("Imate "+točnih+" točnih odgovora! Pogledajte ispravne rezultate kviza.");
+}
+</script>
+</head>
+<body>
+<h2>Odgovorite na iduća pitanja:</h2>
+<form name="form">
+<input type="checkbox" name="pitanje1">
+Trava je zelena.<br>
+<input type="checkbox" name="pitanje2">
+Jupiter nije planet.<br>
+<input type="checkbox" name="pitanje3">
+Hrvatska je carstvo.<br>
+<input type="checkbox" name="pitanje4">
+U Njemačkoj se govori njemački.<br>
+<input type="button" value="Rezultati kviza" onClick="rezultat();">
+</form>
+</HTML>
