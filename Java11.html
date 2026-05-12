@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>Interaktivna forma</TITLE>
+<script language="JavaScript">
+function obavijest()
+{
+if (window.document.form.odgovor[0].checked==true ||
+window.document.form.odgovor[4].checked==true)
+{alert("Ne, ovo mjesto je općina!");}
+if (window.document.form.odgovor[1].checked==true ||
+window.document.form.odgovor[2].checked==true ||
+window.document.form.odgovor[3].checked==true)
+{alert("Da, ovo mjesto je grad!");}
+}
+</script>
+</head>
+<body>
+<form name="form" onClick="obavijest();">
+Koja su od navedenih mjesta su gradovi?<br>
+
+<input type="radio" name="odgovor">
+Gornja Stubica je grad.<br>
+<input type="radio" name="odgovor">
+Zlatar je grad.<br>
+<input type="radio" name="odgovor">
+Oroslavje je grad.<br>
+<input type="radio" name="odgovor">
+Krapina je grad.<br>
+<input type="radio" name="odgovor">
+Bedekovčina je grad.<br>
+</form>
+</HTML>

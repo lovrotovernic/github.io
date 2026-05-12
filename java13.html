@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>For petlja</TITLE>
+<script language="JavaScript">
+function mark()
+{
+for (var i=0; i < window.document.form.elements.length; i++)
+{window.document.form.elements[i].checked=true;}
+}
+</script>
+</head>
+<body>
+<h2> Koji vam je najdraži glumac?</h2>
+<form name="form">
+<input type="checkbox">Jackie Chan<br>
+<input type="checkbox">Chris Pratt<br>
+<input type="checkbox">Jason Statham<br>
+<input type="checkbox">Jason Mamoa<br>
+<input type="checkbox">John Cena<br>
+<input type="checkbox">Dwayne Johnson<br>
+<input type="checkbox">Danny DeVito<br>
+<input type="checkbox">Vin Diesel<br>
+<input type="checkbox">Paul Walker<br>
+<input type="checkbox">Charlie Sheen<br>
+<input type="button" value="Označi sve" onClick="mark();">
+<br>
+<p>
+</form>
+</body>
+</HTML>

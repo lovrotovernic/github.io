@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Čitanje pull-down menia i scroll liste</TITLE>
+<script language="JavaScript">
+function fact()
+{
+var spol=window.document.form.spol.selectedIndex;
+var izspol=window.document.form.spol.options[spol].text;
+
+var animat=window.document.form.animat.selectedIndex;
+var izanimat=window.document.form.animat.options[animat].text;
+{alert("Vi ste osoba " + izspol + "g spola koje će se preporoditi u" + izanimat + ".");}
+}
+</script>
+</head>
+<body>
+<form name="form">
+Kojeg ste spola?<br>
+<select name="spol" size="1">
+<option>muško
+<option>žensko
+<option>limarijsko
+</select>
+<p>
+Koju životinju ili građevinski materijal bi ste izabrali?:<br>
+<select name="animat" size="3">
+<option>tigra
+<option>kamen
+<option>jelena
+<option>drvo
+<option>bizona
+<option>cement
+<option>losa
+</select><p>
+<input type="button" value="Čudna činjenica." onClick="fact();">
+</form>
+</body>
+</HTML>
