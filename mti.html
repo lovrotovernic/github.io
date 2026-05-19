@@ -1,0 +1,89 @@
+<html>
+<title>Telefonski imenik</title>
+<style>
+body{background:#2b2b2b;font-family:Arial,sans-serif;}
+.wrapper{width:260px;margin:30px;}
+.box{background:#b8ecec;padding:10px;margin-bottom:20px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;box-shadow:5px 5px 10px #000;-moz-box-shadow:5px 5px 10px #000;-webkit-box-shadow:5px 5px 10px #000;transition:0.5s;}
+select{background:#5f9ea0;color:white;border:none;padding:5px;border-radius:5px;margin-bottom:10px;}
+.broj{margin:8px 0;color:black;}
+.ispis{display:inline-block;width:130px;background:#5f9ea0;color:white;padding:3px;margin-left:10px;border-radius:5px;}
+textarea{width:190px;height:120px;background:#5f9ea0;color:white;border:none;resize:none;padding:10px;border-radius:8px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="box" id="box1">
+<select id="osoba" onchange="promijeniPodatke()">
+<option value="">Odaberi osobu...</option>
+<option value="marija">Marija</option>
+<option value="petar">Petar</option>
+<option value="ivana">Ivana</option>
+</select>
+<div class="broj">Tel. broj:<span id="tel" class="ispis"></span></div>
+<div class="broj">Mob. broj:<span id="mob" class="ispis"></span></div>
+</div>
+<div class="box">
+<select id="dani" onchange="prikaziDan()">
+<option value="">Odaberi dan...</option>
+<option value="ponedjeljak">Ponedjeljak</option>
+<option value="utorak">Utorak</option>
+<option value="srijeda">Srijeda</option>
+<option value="cetvrtak">Četvrtak</option>
+<option value="petak">Petak</option>
+</select>
+<br>
+<textarea id="tekst" readonly></textarea>
+</div>
+</div>
+<script>
+function promijeniPodatke(){
+var osoba=document.getElementById("osoba").value;
+var tel=document.getElementById("tel");
+var mob=document.getElementById("mob");
+var box1=document.getElementById("box1");
+if(osoba=="marija"){
+tel.innerHTML="01/445-223";
+mob.innerHTML="091 555 444";
+box1.style.background="#ffd6d6";
+}
+else if(osoba=="petar"){
+tel.innerHTML="01/777-888";
+mob.innerHTML="098 222 111";
+box1.style.background="#d6f5d6";
+}
+else if(osoba=="ivana"){
+tel.innerHTML="01/333-999";
+mob.innerHTML="095 444 777";
+box1.style.background="#d6e6ff";
+}
+else{
+tel.innerHTML="";
+mob.innerHTML="";
+box1.style.background="#b8ecec";
+}
+}
+function prikaziDan(){
+var dan=document.getElementById("dani").value;
+var tekst=document.getElementById("tekst");
+if(dan=="ponedjeljak"){
+tekst.value="Predavanja: Matematika\nVježbe: Programiranje\nZadatak: HTML i CSS";
+}
+else if(dan=="utorak"){
+tekst.value="Predavanja: Baze podataka\nSeminar: Informatika\nProjekt: JavaScript";
+}
+else if(dan=="srijeda"){
+tekst.value="Predavanja: Mreže\nLaboratorij: Linux\nUčenje za kolokvij";
+}
+else if(dan=="cetvrtak"){
+tekst.value="Predavanja: Web dizajn\nRadionica: Bootstrap\nVježba: Forma";
+}
+else if(dan=="petak"){
+tekst.value="Predavanja: Sigurnost\nPrezentacija projekta\nSlobodno poslijepodne";
+}
+else{
+tekst.value="";
+}
+}
+</script>
+</body>
+</html>
