@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>manipulacija dib elementa javascriptom</title>
+</head>
+<body>
+
+    <div><img src="dexter.png" alt="Prva slika" width="200"></div>
+    
+    <div id="drugaSlika" style="position: relative; left: 0px;"><img src="doakes.webp" alt="Druga slika" width="200"></div>
+    
+    <div><img src="doakes2.webp" alt="Treća slika" width="200"></div>
+
+    <input type="button" value="Pomakni desno" onclick="window.document.getElementById('drugaSlika').style.left = (parseInt(window.document.getElementById('drugaSlika').style.left) || 0) + 30 + 'px';">
+
+</body>
+</html>

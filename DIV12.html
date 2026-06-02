@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulacija div elementima</title>
+</head>
+<body>
+
+    <div id="prvaSlika" style="position: absolute; top: 50px; left: 10px; z-index: 3;">
+        <img src="dexter.png" alt="Prva slika" width="100">
+    </div>
+    
+    <div id="drugaSlika" style="position: absolute; top: 50px; left: 10px; z-index: 2;">
+        <img src="doakes.webp" alt="Druga slika" width="200">
+    </div>
+    
+    <div id="trecaSlika" style="position: absolute; top: 50px; left: 10px; z-index: 1;">
+        <img src="doakes2.webp" alt="Treća slika" width="200">
+    </div>
+
+    <input type="button" value="Prikaži 1. sliku na vrhu" style="margin-top: 300px;" 
+           onclick="document.getElementById('prvaSlika').style.zIndex = '10'; document.getElementById('drugaSlika').style.zIndex = '1'; document.getElementById('trecaSlika').style.zIndex = '1';">
+
+    <input type="button" value="Prikaži 3. sliku na vrhu" style="margin-top: 300px;" 
+           onclick="document.getElementById('trecaSlika').style.zIndex = '10'; document.getElementById('prvaSlika').style.zIndex = '1'; document.getElementById('drugaSlika').style.zIndex = '1';">
+
+</body>
+</html>
